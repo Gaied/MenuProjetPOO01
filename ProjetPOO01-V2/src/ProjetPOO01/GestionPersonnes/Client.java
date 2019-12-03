@@ -34,6 +34,7 @@ public class Client extends Personne implements IClient, IFournisseur {
 
 	@Override
 	public boolean paie() {
+		System.out.println("Paiement effectué par le client");
 		return false;
 		
 	}

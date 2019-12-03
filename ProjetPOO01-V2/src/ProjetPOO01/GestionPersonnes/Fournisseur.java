@@ -49,6 +49,7 @@ public class Fournisseur extends Personne implements IClient, IFournisseur {
 	@Override
 	public boolean paie() {
 		// TODO Auto-generated method stub
+		System.out.println("Paiement effectué par le fournisseur");
 		return false;
 	}
 

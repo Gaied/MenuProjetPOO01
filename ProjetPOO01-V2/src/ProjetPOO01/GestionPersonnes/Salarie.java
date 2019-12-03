@@ -36,6 +36,7 @@ public class Salarie extends Personne implements IClient {
 	@Override
 	public boolean paie() {
 		// TODO Auto-generated method stub
+		System.out.println("Paiement effectué par le salarie");
 		return false;
 	}
 

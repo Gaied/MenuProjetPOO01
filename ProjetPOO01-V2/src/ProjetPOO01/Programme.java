@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+
 import ProjetPOO01.GestionPersonnes.Client;
 import ProjetPOO01.GestionPersonnes.Fournisseur;
 import ProjetPOO01.GestionPersonnes.Patron;

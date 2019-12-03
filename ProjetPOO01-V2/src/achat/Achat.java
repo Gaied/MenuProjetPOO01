@@ -9,7 +9,7 @@ public class Achat {
    public int qte;
    
 public Achat(Date date, String intitule, int qte) {
-	super();
+	
 	this.dateAchat = date;
 	this.intitule = intitule;
 	this.qte = qte;
