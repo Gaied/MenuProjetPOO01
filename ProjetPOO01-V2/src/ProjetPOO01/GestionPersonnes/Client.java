@@ -2,7 +2,7 @@ package ProjetPOO01.GestionPersonnes;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import commande.Commande;
 import achat.Achat;
 
 public class Client extends Personne implements IClient, IFournisseur {
@@ -27,7 +27,7 @@ public class Client extends Personne implements IClient, IFournisseur {
 	}
 
 	@Override
-	public void commande() {
+	public void commande(List<Commande> c) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -50,6 +50,7 @@ public class Client extends Personne implements IClient, IFournisseur {
 	@Override
 	public void achete(List<Achat> ListAchat) {
 		// TODO Auto-generated method stub
+		System.out.println("Le client a effecté des achats :");
 		
 	}
 

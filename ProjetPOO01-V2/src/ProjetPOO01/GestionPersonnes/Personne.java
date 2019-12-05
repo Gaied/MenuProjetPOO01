@@ -2,17 +2,43 @@ package ProjetPOO01.GestionPersonnes;
 
 import java.io.Serializable;
 
+
 import projetPOOException.ExceptionSaisie;
+
+/**
+ * 
+ * @author Bassel Gaied
+ * @version 1.0
+ *
+ */
 
 public class Personne implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	/**
+	 * JAVADOC
+	 * Nom de la personne : obligatoire
+	 */
 	private String nom;
+	/**
+	 * JAVADOC
+	 * Prénom de la personne : obligatoire
+	 */
 	private String prenom;
 	private String adresse;
 	private String ville;
+	/**
+	 * JAVADOC
+	 * Codepostale de la personne : obligatoire
+	 */
 	private String codepostal;
 	
+	/**
+	 * Constructeur de la classe Personne
+	 * @param nom
+	 * @param prenom
+	 * @param dateNaissance
+	 */
 	public Personne(String nom, String prenom, String adresse, String ville, String codepostal) {
 		super();
 		this.nom = nom;
@@ -27,7 +53,11 @@ public class Personne implements Serializable {
 		return "Personne [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", ville=" + ville
 				+ ", codepostal=" + codepostal + "]";
 	}
-
+    
+	/**
+	 * 
+	 * @return <b> Le nom de la Personne </b>
+	 */
 	public String getNom() {
 		return nom;
 	}

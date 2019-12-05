@@ -1,8 +1,8 @@
 package ProjetPOO01.GestionPersonnes;
 
 import java.util.List;
-
 import achat.Achat;
+import commande.Commande;
 
 public class Fournisseur extends Personne implements IClient, IFournisseur {
 
@@ -35,7 +35,7 @@ public class Fournisseur extends Personne implements IClient, IFournisseur {
 	}
 
 	@Override
-	public void commande() {
+	public void commande(List<Commande> c) {
 		// TODO Auto-generated method stub
 		
 	}
