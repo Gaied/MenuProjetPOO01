@@ -37,7 +37,9 @@ public class Personne implements Serializable {
 	 * Constructeur de la classe Personne
 	 * @param nom
 	 * @param prenom
-	 * @param dateNaissance
+	 * @param adresse
+	 * @param ville
+	 * @param codepostale
 	 */
 	public Personne(String nom, String prenom, String adresse, String ville, String codepostal) {
 		super();
@@ -64,24 +66,40 @@ public class Personne implements Serializable {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
+	/**
+	 * 
+	 * @return <b> Le prenom de la Personne </b>
+	 */
 	public String getPrenom() {
 		return prenom;
 	}
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
+	/**
+	 * 
+	 * @return <b> L'adresse de la Personne </b>
+	 */
 	public String getAdresse() {
 		return adresse;
 	}
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
+	/**
+	 * 
+	 * @return <b> La ville de la Personne </b>
+	 */
 	public String getVille() {
 		return ville;
 	}
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
+	/**
+	 * 
+	 * @return <b> Le code postale de la Personne </b>
+	 */
 	public String getCodepostal() {
 		return codepostal;
 	}
