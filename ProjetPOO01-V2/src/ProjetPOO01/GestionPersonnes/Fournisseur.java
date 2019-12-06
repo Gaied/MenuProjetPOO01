@@ -25,7 +25,7 @@ public class Fournisseur extends Personne implements IClient, IFournisseur {
 
 	@Override
 	public String toString() {
-		return "Fournisseur []" +super.toString();
+		return "Fournisseur []" +super.toString()+"[numFournisseur="+this.numFournisseur+"]";
 	}
 
 	@Override

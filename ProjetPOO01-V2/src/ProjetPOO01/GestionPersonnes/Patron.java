@@ -38,7 +38,7 @@ public class Patron extends Salarie implements IPatron {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString();
+		return super.toString()+"[salaire="+this.salaire+"]";
 	}
 
 	@Override

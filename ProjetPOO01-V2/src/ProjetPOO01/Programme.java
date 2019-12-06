@@ -17,7 +17,6 @@ import projetPOOException.ExceptionSaisie;
 public class Programme {
 	
 	public static Scanner sc = new Scanner(System.in);
-	
 	public static List<Salarie> ListSalarie = new ArrayList<Salarie>();
 	public static List<Client> ListClient = new ArrayList<Client>();
 	public static List<Fournisseur> ListFournisseur = new ArrayList<Fournisseur>();
@@ -27,19 +26,7 @@ public class Programme {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub;
 		Programme.menu();
-		/*List<Salarie> ListSalarie = Programme.SaisirSalarie();
-		List<Client> ListClient = Programme.SaisirClient();
-		List<Fournisseur> ListFournisseur = Programme.SaisirFournisseur();
-		Patron Patron = Programme.SaisirPatron();
-		List<Achat> ListAchat = Programme.saisirAchat();
-		
-		System.out.println(ListSalarie);
-		System.out.println(ListClient);
-		System.out.println(ListFournisseur);
-		System.out.println(Patron);
-		System.out.println(ListAchat);*/
 	}
-	
 	public static void menu() {
 		String choix;
 		
@@ -74,8 +61,6 @@ public class Programme {
 	
 	public static List<Salarie> SaisirSalarie() {
 		
-		//List<Salarie> ListSalarie = new ArrayList<Salarie>();
-			
 		System.out.println("Veuillez saisir le nom de Salarie :");
 		String nom = sc.nextLine();
 		System.out.println("Veuillez saisir le prénom de Salarie  :");
@@ -107,7 +92,7 @@ public class Programme {
 			System.out.println(e.getMessage());
 		}
 				
-		System.out.println("Veuillez saisir le Salaire :");
+		System.out.println("Veuillez saisir le Salaire en format xx,xxx :");
 		
 		double salaire = sc.nextDouble();
 		sc.nextLine();
@@ -116,13 +101,15 @@ public class Programme {
 		
 		ListSalarie.add(Sal1);
 		
+		ListSalarie.forEach(s -> {
+			System.out.println(s);
+		});
+		
 		return ListSalarie;
 		
 		}
 
 	public static List<Client> SaisirClient() {
-		
-		 //List<Client> ListClient = new ArrayList<Client>();
 
 		System.out.println("Veuillez saisir le nom de Client :");
 		String nom = sc.nextLine();
@@ -144,16 +131,26 @@ public class Programme {
 		System.out.println("Veuillez saisir le numéro de Client :");
 		String numClient = sc.nextLine();
 		
+		for(Client clt: ListClient) {
+			while(clt.getNumClient().equals(numClient)) {
+				System.out.println("le numéro de client existe déja!");
+				numClient=sc.nextLine();
+			}
+			
+		}
+		
 		Client cl1 = new Client(nom, prenom, adresse,ville, codepostale,numClient);
 		
 		ListClient.add(cl1);
+		
+		ListClient.forEach(c -> {
+			System.out.println(c);
+		});
 		 
 		return ListClient;	
 	}
 	
 	public static List<Fournisseur> SaisirFournisseur() {
-		
-		//List<Fournisseur> ListFournisseur = new ArrayList<Fournisseur>();
 		
 		System.out.println("Veuillez saisir le nom de Fournisseur :");
 		String nom =sc.nextLine();
@@ -175,9 +172,20 @@ public class Programme {
 		System.out.println("Veuillez saisir le numéro de Fournisseur :");
 		String numfr = sc.nextLine();
 		
+		for(Fournisseur lf: ListFournisseur) {
+			while(lf.getNumFournisseur().equals(numfr)) {
+				System.out.println("le numéro de client existe déja!");
+				numfr=sc.nextLine();
+			}
+		}
+		
 		Fournisseur fr = new Fournisseur(nom, prenom, adresse,ville, codepostale,numfr);
 		
 		ListFournisseur.add(fr);
+		
+		ListFournisseur.forEach(f -> {
+			System.out.println(f);
+		});
 		
 		return ListFournisseur;
 	}
@@ -210,7 +218,7 @@ public class Programme {
 			//e.printStackTrace();
 			System.out.println(e.getMessage());
 		}
-        System.out.println("Veuillez saisir le Salaire de patron:");
+        System.out.println("Veuillez saisir le Salaire de patron en format xx,xxx :");
 		double salaire = sc.nextDouble();
 		sc.nextLine();
 		
@@ -219,8 +227,6 @@ public class Programme {
 	}
 	
 	public static List<Achat> saisirAchat() {
-		
-		//List<Achat> ListAchat = new ArrayList<Achat>();
 		
 		System.out.println("Veuillez saisir la date d'achat \"dd/MM/yyyy\"");
 		String date = sc.nextLine();
@@ -243,6 +249,10 @@ public class Programme {
 		Achat a = new Achat(dt, intitule, qte);
 		
 		ListAchat.add(a);
+		
+		ListAchat.forEach(at -> {
+			System.out.println(at);
+		});
 	    
 		return ListAchat;
 		

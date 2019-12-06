@@ -17,8 +17,9 @@ public class Client extends Personne implements IClient, IFournisseur {
 
 	@Override
 	public String toString() {
-		return "Client []" +super.toString();
+		return "Client []" +super.toString()+"[numClient="+this.numClient+"]";
 	}
+	
 
 	@Override
 	public void livre() {

@@ -48,7 +48,7 @@ public class Salarie extends Personne implements IClient {
 	
 	@Override
 	public String toString() {
-		return "Salarie []" +super.toString();
+		return "Salarie []" +super.toString()+"[numsecurite="+this.numsecurite + "numsecurite="+this.salaire +"]";
 	}
 
 	@Override
