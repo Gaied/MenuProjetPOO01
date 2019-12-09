@@ -14,7 +14,7 @@ private Fournisseur f;
 	private final String oadresse="Rue Lyon";
 	private final String oville="Lyon";
 	private final String ocodepostal="69100";
-	private final String onumfournisseur="123";
+	private final int onumfournisseur=123;
 	
 	@Before
 	public void init() {
